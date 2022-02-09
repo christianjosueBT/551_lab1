@@ -1,0 +1,36 @@
+{% extends "template.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+<!-- main section -->
+<section class="main container-grid">
+  <!-- <div class="container-sm">
+    <p class="h2 mb-4 text-white">Search for books by isbn number, title, or author</p>
+    <div class="input-group mb-3">
+      <form action="{{url_for('results')}}" method="POST" class="input-group mb-3">
+        <input type="text" name="search" class="form-control" placeholder="Search for books" aria-label="Search">
+        <button type="submit" class="btn btn-primary">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+  </div> -->
+
+  <!-- <div class="input-group">
+    <div class="form-outline">
+      <input type="search" id="form1" class="form-control" />
+      <label class="form-label" for="form1">Search</label>
+    </div>
+    <button type="button" class="btn btn-primary">
+      <i class="bi bi-search"></i>
+    </button>
+  </div> -->
+
+  <div class="d-flex justify-content-center h-100">
+    <form action="{{url_for('results')}}" method="POST" class="searchbar">
+      <input class="search_input" type="text" name="search" placeholder="Search">
+      <button type="submit" class="search_icon btn"><i class="bi bi-search"></i></button>
+    </form>
+  </div>
+</section>
+{% endblock %}
